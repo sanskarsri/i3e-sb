@@ -22,7 +22,8 @@ body {
 }
 
 .ieee{
-	color:#fff;
+	height: 80px;
+    width: 80px;
 }
 .sb{
 	color:#fc0254;
@@ -172,29 +173,65 @@ Commom elements
 }
 
 .loader {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-50%);
 	border-radius: 50%;
-	animation: loader 0.8s linear infinite;
-	-webkit-animation: loader 0.8s linear infinite;
 }
-
-@keyframes loader {
-	0% {
-		transform:scale(1);
-	}
-	50% {
-	
-		transform:scale(2);
-	}
-	100% {
-	
-		transform:scale(1);
-	}
-}
+.loader:before{
+    content:"";
+    border: 4px solid silver;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+  }
+  .loader:after{
+    content:"";
+    border: 4px solid silver;
+    border-radius: 50%;
+	width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader1 2s linear infinite;
+    animation-delay: 1s;
+    opacity: 0;
+  }
+  @keyframes loader{
+    0%{
+      transform: scale(1);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: scale(2);
+      opacity: 0;
+    }
+  } 
+  @keyframes loader1{
+    0%{
+      transform: scale(1);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: scale(2);
+      opacity: 0;
+    }
+  } 
 /* @keyframes loader {
 	0% {
 		-webkit-transform: rotate(0deg);
@@ -239,6 +276,7 @@ Header section
  ---------------------*/
 
 .header-section {
+	position: relative;
 	padding-left: 55px;
 	padding-right: 72px;
 	background: #08192d;
@@ -247,7 +285,7 @@ Header section
 .site-logo {
 	display: inline-block;
 	padding: 0;
-	padding: 44px 15px;
+	padding: 15px 15px;
 }
 
 .header-right {
@@ -284,7 +322,9 @@ Header section
 
 .main-menu {
 	list-style: none;
-	float: right;
+	position: absolute;
+    top: 0;
+    right: 40px;
 }
 
 .main-menu li {
@@ -1468,6 +1508,11 @@ Artest Page
 	padding-top: 0;
 	float: right;
 }
+.institute{
+	color: #fff;
+	font-size:20px;
+	width: fit-content;
+}
 
 /* ----------------
 Responsive
@@ -1493,6 +1538,69 @@ Responsive
 	}
 	.main-menu .sub-menu {
 		left: 25px;
+	}
+	.hr-img {
+		display: none;
+	}
+.hr-img {
+		display: none;
+	}
+	.slicknav_menu {
+		display: block;
+		background: transparent;
+		margin-top: -60px;
+	}
+	.slicknav_nav {
+		background: #1c294a;
+		margin-bottom: 35px;
+	}
+	.slicknav_nav ul {
+		margin: 0 0 0 0;
+	}
+	.slicknav_nav .slicknav_row,
+	.slicknav_nav a {
+		padding: 12px 25px;
+		margin: 0;
+	}
+	.slicknav_nav a:hover {
+		border-radius: 0;
+		color: #fc0254;
+		background: transparent;
+	}
+	.slicknav_btn {
+		position: relative;
+		top: -24px;
+		background: #1c294a;
+	}
+	.main-menu {
+		display: none;
+	}
+	.header-right {
+		display: none;
+	}
+	.header-right-warp .header-right {
+		display: block;
+		float: none;
+		padding: 0 0 24px;
+		margin-left: 0;
+	}
+	.header-right-warp .header-right span {
+		display: none;
+	}
+	.header-right-warp .header-right .user-panel {
+		display: block;
+		padding-left: 26px;
+	}
+	.header-right-warp .header-right .user-panel a {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	.header-right-warp .header-right .user-panel a:hover {
+		background: transparent;
+	}
+	.header-right-warp .header-right .user-panel .login {
+		padding-right: 10px;
 	}
 }
 
@@ -1562,6 +1670,66 @@ Responsive
 	}
 	.category-section {
 		padding: 100px 0;
+	}
+	.hr-img {
+		display: none;
+	}
+	.slicknav_menu {
+		display: block;
+		background: transparent;
+		margin-top: -60px;
+	}
+	.slicknav_nav {
+		background: #1c294a;
+		margin-bottom: 35px;
+	}
+	.slicknav_nav ul {
+		margin: 0 0 0 0;
+	}
+	.slicknav_nav .slicknav_row,
+	.slicknav_nav a {
+		padding: 12px 25px;
+		margin: 0;
+	}
+	.slicknav_nav a:hover {
+		border-radius: 0;
+		color: #fc0254;
+		background: transparent;
+	}
+	.slicknav_btn {
+		position: relative;
+		top: -24px;
+		background: #1c294a;
+	}
+	.main-menu {
+		display: none;
+	}
+	.header-right {
+		display: none;
+	}
+	.header-right-warp .header-right {
+		display: block;
+		float: none;
+		padding: 0 0 24px;
+		margin-left: 0;
+	}
+	.header-right-warp .header-right span {
+		display: none;
+	}
+	.header-right-warp .header-right .user-panel {
+		display: block;
+		padding-left: 26px;
+	}
+	.header-right-warp .header-right .user-panel a {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	.header-right-warp .header-right .user-panel a:hover {
+		background: transparent;
+	}
+	.header-right-warp .header-right .user-panel .login {
+		padding-right: 10px;
 	}
 }
 
@@ -1980,5 +2148,19 @@ Responsive
 	.search-form button {
 		position: relative;
 		margin-top: 20px;
+	}
+	.institute
+	{
+		font-size: 13px;
+	}
+	.site-logo{
+		padding: 10px 10px;
+	}
+	.ieee {
+		height: 75px;
+		width: 75px;
+	}
+	.slicknav_btn{
+		margin-top: 15px;
 	}
 }
