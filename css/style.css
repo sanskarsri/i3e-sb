@@ -637,7 +637,7 @@ Subscription section
 }
 
 /* ----------------
-Premium section 
+Premium section
  -------------------*/
 
 .premium-section p {
@@ -757,7 +757,7 @@ Playlist page
 .playlist-item img {
 	width: 280px;
 	height: 280px;
-	border-radius: 40px;
+	border-radius: 50%;
 	margin-bottom: 30px;
 }
 
@@ -800,12 +800,15 @@ Blog page
 	margin-bottom: 90px;
 }
 
-.blog-item img,
-.about-item img {
+.blog-item img {
 	margin-bottom: 36px;
 }
 
 /* add to mq */
+.gallery-flex{
+flex:1 1 25%;
+}
+
 .btn-purple {
 	background-color: #272151;
 	color: #fff;
@@ -885,15 +888,18 @@ Blog page
 }
 
 .blog-item .blog-date {
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 600;
 	color: #fc0254;
 	margin-bottom: 24px;
+	margin-bottom:-10px;
 }
 
 .blog-item h3,
 .about-item h3 {
 	margin-bottom: 5px;
+    margin-top: 30px;
+    font-size: 45px;
 }
 
 .blog-item .blog-meta {
@@ -1742,7 +1748,7 @@ Responsive
 		padding: 100px 0;
 	}
 
-	/* 
+	/*
 	.hr-img {
 		display: none;
 	} */
@@ -1971,7 +1977,7 @@ Responsive
 
 	.playlist-section,
 	.category-section {
-		padding: 100px 0;
+		padding: -1px 0;
 	}
 
 	.playlist-section .container,
@@ -2146,7 +2152,7 @@ Responsive
 	}
 
 	.playlist-section {
-		padding: 100px 20px;
+		padding: 45px 20px;
 	}
 
 	.artist-details img {
@@ -2195,7 +2201,7 @@ Responsive
 
 	.similar-songs-section,
 	.playlist-section {
-		padding: 100px 0;
+		padding: -1px 0;
 	}
 
 	.similar-songs-section .container,
@@ -2245,6 +2251,9 @@ Responsive
 /* Small Mobile :320px. */
 
 @media only screen and (max-width: 479px) {
+	.gallery-flex{
+		flex:unset !important;
+	}
 	.about-item {
 		flex-direction: column;
 	}
@@ -2359,4 +2368,37 @@ Responsive
 	.slicknav_btn {
 		margin-top: 15px;
 	}
+}
+
+
+/*Gallery CSS*/
+
+.events h2{
+	font-size: 60px;
+	text-align: center;
+	padding-bottom: 0px;
+	padding-top:80px;
+}
+
+
+.team{
+	margin-bottom:50px;
+	text-align:center;
+}
+
+.two{
+	background-color: #fff;
+}
+
+
+thoverimg{
+transition: filter .3s ease-in-out;
+-webkit-filter: grayscale(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+filter: grayscale(90%); /* FF 35+ */
+transition: 0.3s all ease-in-out;
+}
+.thoverimg:hover {
+-webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+filter: grayscale(0%); /* FF 35+ */
+ transform: scale(1.02);
 }
