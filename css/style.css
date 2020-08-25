@@ -805,6 +805,10 @@ Blog page
 }
 
 /* add to mq */
+.gallery-flex{
+flex:1 1 25%;
+}
+
 .btn-purple {
 	background-color: #272151;
 	color: #fff;
@@ -2247,6 +2251,9 @@ Responsive
 /* Small Mobile :320px. */
 
 @media only screen and (max-width: 479px) {
+	.gallery-flex{
+		flex:unset !important;
+	}
 	.about-item {
 		flex-direction: column;
 	}
