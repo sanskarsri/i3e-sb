@@ -810,6 +810,10 @@ Blog page
 .gallery-flex{
 flex:1 1 25%;
 }
+.category-items{
+	display: inline-flex;
+} 
+
 .head-top{
 	width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
@@ -1041,8 +1045,8 @@ Category page
 .category-item {
 	position: relative;
 	margin: 0 17px;
-	overflow: hidden;
 	height: 36vh;
+	overflow: hidden;
 }
 
 .category-item:after {
