@@ -1555,6 +1555,16 @@ Artest Page
 	width: fit-content;
 }
 
+.back-gallery{
+	color:#fff;
+	position: fixed;
+	top:20vh;
+	right:2vw;
+	font-size: 20px;
+}
+.back-gallery a{
+	color:#fff;
+}
 /* ----------------
 Responsive
  -------------------*/
@@ -1831,7 +1841,9 @@ Responsive
 	.about-item img {
 		height: 100%;
 	}
-
+	.back-gallery{
+		top:25vh;
+	}
 	.tab-screen {
 		display: flex;
 		flex-direction: column;
@@ -2031,7 +2043,9 @@ Responsive
 	.about-item {
 		flex-direction: column;
 	}
-
+	.back-gallery{
+		top:30vh;
+	}
 	.playlist-item img {
 		width: 250px;
 		height: 250px;
