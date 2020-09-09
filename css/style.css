@@ -824,8 +824,33 @@ Blog page
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	z-index: 2;
 	box-shadow:-8px -8px 15px rgba(255, 255, 255, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.1),
 	10px 10px 10px #0a183d81, inset 10px 10px 10px #0a183d81;	
+}
+
+.box:before {
+	content: "";
+    background: #fff;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: -1;
+	animation: glow 2s linear infinite;
+}
+
+
+@keyframes glow {
+	0% {
+		transform: scale(1);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
 }
 .box p{
 	font-weight: 800;
