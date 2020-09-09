@@ -807,6 +807,38 @@ Blog page
 }
 
 /* add to mq */
+.scores{
+	background-color: #0A183D;
+	min-height: 10vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 35px 0;
+	z-index: 5;
+}
+.box{
+	width: 100px;
+	height: 100px;
+	background:#fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow:-8px -8px 15px rgba(255, 255, 255, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.1),
+	10px 10px 10px #0a183d81, inset 10px 10px 10px #0a183d81;	
+}
+.box p{
+	font-weight: 800;
+	color: #0A183D;
+	margin: 0;
+	font-size: 20px;
+}
+.box-text{
+	color:#fff;
+	padding-top: 10px;
+	font-size: 20px;
+
+}
 .gallery-flex{
 flex:1 1 25%;
 }
@@ -2248,6 +2280,9 @@ Responsive
 /* Small Mobile :320px. */
 
 @media only screen and (max-width: 479px) {
+	.scores{
+		flex-direction: column;
+	}
 	.gallery-flex{
 		flex:unset !important;
 	}
